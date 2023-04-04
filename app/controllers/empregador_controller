@@ -1,25 +1,25 @@
-class EmpregadorsController < ApplicationController
+class EmpregadorController < ApplicationController
   before_action :set_empregador, only: %i[ show edit update destroy ]
 
-  # GET /empregadors or /empregadors.json
+  # GET /empregador or /empregador.json
   def index
-    @empregadors = Empregador.all
+    @empregador = Empregador.all
   end
 
-  # GET /empregadors/1 or /empregadors/1.json
+  # GET /empregador/1 or /empregador/1.json
   def show
   end
 
-  # GET /empregadors/new
+  # GET /empregador/new
   def new
     @empregador = Empregador.new
   end
 
-  # GET /empregadors/1/edit
+  # GET /empregador/1/edit
   def edit
   end
 
-  # POST /empregadors or /empregadors.json
+  # POST /empregador or /empregador.json
   def create
     @empregador = Empregador.new(empregador_params)
 
@@ -34,7 +34,7 @@ class EmpregadorsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /empregadors/1 or /empregadors/1.json
+  # PATCH/PUT /empregador/1 or /empregador/1.json
   def update
     respond_to do |format|
       if @empregador.update(empregador_params)
@@ -47,12 +47,12 @@ class EmpregadorsController < ApplicationController
     end
   end
 
-  # DELETE /empregadors/1 or /empregadors/1.json
+  # DELETE /empregador/1 or /empregador/1.json
   def destroy
     @empregador.destroy
 
     respond_to do |format|
-      format.html { redirect_to empregadors_url, notice: "Empregador was successfully destroyed." }
+      format.html { redirect_to empregador_url, notice: "Empregador was successfully destroyed." }
       format.json { head :no_content }
     end
   end
